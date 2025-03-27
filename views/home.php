@@ -1,16 +1,20 @@
 <?php require_once 'views/layouts/header.php'; ?>
 
-<div class="container mt-4 text-center">
-    <div class="card p-4 shadow-sm">
-        <h2 class="mb-3">Chào mừng, <span class="text-primary"><?= $_SESSION['user']['username'] ?></span>!</h2>
-        <p class="lead">Bạn đã đăng nhập thành công vào hệ thống.</p>
-        <div class="text-center">
-            <a href="/auth/logout" class="btn btn-outline-danger mt-3 d-inline-block"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a>
+<main class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-md-6 col-lg-12 mt-5 pt-5">
+            <div class="card p-4 shadow-sm text-center">
+                <h2 class="mb-3">Chào mừng, <span class="naminc"><?= $_SESSION['user']['username'] ?>!</span></h2>
+                <p class="lead">Bạn đã đăng nhập thành công vào hệ thống.</p>
+                <div class="text-center">
+                    <a href="/auth/logout" class="btn btn-outline-danger mt-3 d-inline-block"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Table danh sách tài khoản -->
+<div class="row">
     <div class="col-12 col-sm-8 col-md-6 col-lg-12 mt-3">
-        <div class="card shadow-sm mb-5">
+        <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white">
                 <strong>Danh sách tài khoản</strong>
             </div>
@@ -54,5 +58,6 @@
         </div>
     </div>
 </div>
+</main>
 
 <?php require_once 'views/layouts/footer.php'; ?>
